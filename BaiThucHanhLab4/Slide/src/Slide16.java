@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Slide16 {
+    public static void main(String[] args) throws Exception {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("JAVA");
+        list.add("PHP");
+        list.add("C#");
+        list.add("C++");
+
+        System.out.println("Cac phan tu co trong list la: ");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + "\t");
+        }
+
+    }
+}
