@@ -1,27 +1,38 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        ArrayList <Integer> list = new ArrayList<>();
-        int number;
-        System.out.println(" Nhap kich thuoc cua mang ");
-        int n = sc.nextInt();
-        for(int i = 0; i < n; i++){
-            System.out.println(" Nhap vao phan thu tu " + i + ":");
-            number = sc.nextInt();
-            list.add(number);
-        }
-
-        System.out.println(" Phan tu trong mang la ");
-        for(Integer integer : list){
-            System.out.println(integer + "\t");
-        }
-        try{
-            do{
+        int n;
+        int i = 0;
+        do {
+            try {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Mang so nguyen");
+                System.out.print("Nhap vao kich thuoc cua mang: ");
+                n = sc.nextInt();
+                int ArrA[] = new int[n];
+                do {
+                    
+                    try {
+                        for (; i < n; i++) {
+                        
+                            System.out.print("Nhap vao phan tu thu " + (i + 1) + " cua mang: ");
+                            ArrA[i] = sc.nextInt();
+                        }
+                    } catch (Exception e) {
+                        ArrA[i] = 0;
+                    }
+                } while (ArrA[i] ==0);
+            } catch (Exception e) {
+                n = 0; 
                 
+                // System.out.println(e);
+    
             }
-        }
+
+        } while (n==0);
+
+        
+
     }
 }
